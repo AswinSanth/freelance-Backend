@@ -8,7 +8,8 @@ const UserSchema = Schema({
   },
   name: {
     type: String,
-    required: true,
+    default: ""
+
   },
   role: {
     type: String,
