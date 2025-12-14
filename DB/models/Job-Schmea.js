@@ -32,11 +32,28 @@ const JobSchema = Schema({
   selectedFreelancer: {
     type: String,
     default: '',
+    lowercase: false
+
   },
   status: {
     type: String,
     enum: ['open', 'in-progress', 'completed'],
     default: 'open',
+  },
+  escrowAddress: {
+    type: String,
+    default: null,
+  },
+
+  escrowStatus: {
+    type: String,
+    enum: ['not_created', 'pending_fund', 'funded', 'released', 'refunded'],
+    default: 'not_created',
+  },
+
+  escrowAmount: {
+    type: Number,
+    default: 0,
   },
 });
 
